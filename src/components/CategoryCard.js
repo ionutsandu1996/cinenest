@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 function CategoryCard({ category }) {
   return (
-    <div className="bg-gray-800 rounded p-4 text-center hover:bg-yellow-500 hover:text-black cursor-pointer">
-      <span className="text-lg font-semibold">{category}</span>
-    </div>
+    <button
+      className="px-4 py-2 bg-gray-100 text-sm rounded-full border border-gray-300 whitespace-nowrap hover:bg-gray-200 transition"
+    >
+      {category}
+    </button>
   );
 }
 
