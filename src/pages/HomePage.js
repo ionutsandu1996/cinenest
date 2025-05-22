@@ -1,6 +1,7 @@
 import CategoryCard from '../components/CategoryCard'; // Componenta pentru cardurile de categorie
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import React from 'react';
 
 function HomePage() {
   return (

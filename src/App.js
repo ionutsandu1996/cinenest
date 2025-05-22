@@ -1,14 +1,15 @@
-import { BrowserRouter as Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
+import React from 'react';
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={HomePage}/>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
         {/* Adăugați mai multe rute pentru paginile de categorie sau video */}
-      </Switch>
+      </Routes>
     </Router>
   );
 }
