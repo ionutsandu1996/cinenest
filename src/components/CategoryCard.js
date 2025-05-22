@@ -1,18 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function CategoryCard({ category }) {
+export default function CategoryCard({ category }) {
   return (
-    <button
-      className="px-4 py-2 bg-gray-100 text-sm rounded-full border border-gray-300 whitespace-nowrap hover:bg-gray-200 transition"
+    <div
+      style={{
+        width: '200px',
+        height: '120px',
+        borderRadius: '10px',
+        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+        backgroundColor: '#fff',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontWeight: '500',
+        fontSize: '1rem',
+        transition: 'transform 0.25s',
+        cursor: 'pointer',
+      }}
+      onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+      onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
     >
       {category}
-    </button>
+    </div>
   );
 }
 
 CategoryCard.propTypes = {
   category: PropTypes.string.isRequired,
 };
-
-export default CategoryCard;
